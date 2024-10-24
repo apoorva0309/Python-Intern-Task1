@@ -42,7 +42,6 @@ def register():
     db.session.commit()
 
     # If the user is an author, adding them to the `authors` table
-    breakpoint()
     if is_author:
         new_author = Author(user_id=new_user.user_id, author_name=username)
         db.session.add(new_author)
